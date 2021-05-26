@@ -2,7 +2,18 @@
 """
 @author: Dana Acosta y David Moreno
 
+
+
+
+
 """
+
+
+import time
+
+
+
+
 #Primero vamos a crear una clase grafo la cual nos va a ayudar a representar el grafo del caballo.
 class Vertice:
     def __init__ (self, llave): #Vamos a crer la clase Vertice que va a tener una llave un color y una lista de conexiones
@@ -170,6 +181,8 @@ CicloHamiltoniano2 = []
 Pos_Inicial = Caballo.getVertice(0)
 
 
+start = time.time()
+
 CicloeulerianoCaballo(0,CicloHamiltoniano,Pos_Inicial,24)
 print("Cicloeuleriano" )
 res=[]
@@ -177,7 +190,12 @@ for i in CicloHamiltoniano:
     print(i.getid())
     res.append(i.getid())
     
+end = time.time()
     
+print("Tiempo Función Cicloeuleriano : ", end - start)
+    
+start2=time.time()
+
 CicloeulerianoCaballoWarnsdorff(0,CicloHamiltoniano2,Pos_Inicial,24)
 res1=[]
 print(" CicloeulerianoCaballoWarnsdorff" )
@@ -185,7 +203,9 @@ for i in CicloHamiltoniano:
     print(i.getid())
     res1.append(i.getid())
     
-
+end2=time.time()
+    
+print("Tiempo Función CicloeulerianoCaballoWarnsdorff : ", end2 - start2)
 
 
 
