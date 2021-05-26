@@ -187,8 +187,5 @@ for i in CicloHamiltoniano:
     
 
 
-#Ahora vamos a utilizar el algorimto de 
-
-
 
 
